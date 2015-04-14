@@ -1,26 +1,49 @@
+
+img {
+  height: 10em;
+  width: 10em;
+}
 h1 {
+  font-family: Arial, cursive;
   text-align: center;
 }
 
 p {
+  font-size: 100%;
+  margin-bottom: 20px;
   text-align: center;
 }
 
-div {
+#photo-one, #photo-two {
+  width: 10em;
+  height: 10em;
+  margin: .5em auto;
+}
+
+.choice-box {
+  float: left;
+  width: 25%;
+  border: 4px solid white;
+}
+.winner {
+  border: 4px solid red;
+}
+
+.choice-box .blink {
+  margin: .5em auto;
+  text-align: center;
+  font-size: 130%;
+  color: #ff0000;
+  font-weight: bold;
+}
+
+#canvas1 {
+  background-color: #B8C1D4;
+  float: left;
+  margin: 1%;
+}
+
+#voting-box {
   margin: auto;
 }
 
-#pic1 {
-  height: 20em;
-  width: 20em;
-  border-style: solid;
-  border-color: black;
-  background-color: blue;
-}
-
-#pic2 {
-  height: 20em;
-  width: 20em;
-  border-style: solid;
-  border-color: black;
-}

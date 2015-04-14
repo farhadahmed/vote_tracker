@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Vote Tracker</title>
+  <title>Marvel vs DC</title>
   <link rel="stylesheet" type="text/css" href="styleSheet.css">
 </head>
+
 <body>
-  <header>
-    <h1>Vote Tracker Time!</h1>
-  </header>
   <main>
-    <p>Which picture do you think is cuter?  Vote by clicking the picture!</p>
-    <div id="pic1"></div>
-    <div id="pic2"></div>
+    <header>
+      <h1>Marvel vs DC</h1>
+      <p>Which superhero do you favor?  Select the image to vote!</p>
+    </header>
 
-    <canvas id="buyers" width="600" height="400"></canvas>
-    <canvas id="countries" width="600" height="400"></canvas>
+    <section id="voting-box">
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script type="text/javascript" src="Chart.min.js"></script>
-    <script type="text/javascript" src="voteTracker.js"></script>
+      <div id="choice1" class="choice-box">
+        <div id="photo-one"><img id="photo1" src="images/1.jpg"></div>
+      </div>
+
+      <canvas width="200" height="200" id="canvas1"></canvas>
+
+      <div  id="choice2" class="choice-box">
+        <div id="photo-two"><img id="photo2" src="images/2.jpg"></div>
+      </div>
+
+    </section>
+
   </main>
+
+  <script type="text/javascript" src="jquery.js"></script>
+  <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
+  <script src="voteTracker.js"></script>
 </body>
 </html>
