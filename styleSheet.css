@@ -1,0 +1,26 @@
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+div {
+  margin: auto;
+}
+
+#pic1 {
+  height: 20em;
+  width: 20em;
+  border-style: solid;
+  border-color: black;
+  background-color: blue;
+}
+
+#pic2 {
+  height: 20em;
+  width: 20em;
+  border-style: solid;
+  border-color: black;
+}

@@ -2,13 +2,23 @@
 <html>
 <head>
   <title>Vote Tracker</title>
+  <link rel="stylesheet" type="text/css" href="styleSheet.css">
 </head>
 <body>
   <header>
     <h1>Vote Tracker Time!</h1>
   </header>
-  <canvas id="buyers" width="600" height="400"></canvas>
-  <script type="text/javascript" src="Chart.min.js"></script>
-  <script type="text/javascript" src="voteTracker.js"></script>
+  <main>
+    <p>Which picture do you think is cuter?  Vote by clicking the picture!</p>
+    <div id="pic1"></div>
+    <div id="pic2"></div>
+
+    <canvas id="buyers" width="600" height="400"></canvas>
+    <canvas id="countries" width="600" height="400"></canvas>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="Chart.min.js"></script>
+    <script type="text/javascript" src="voteTracker.js"></script>
+  </main>
 </body>
 </html>
