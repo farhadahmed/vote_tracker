@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     this.folder = folder;
     this.heroName = heroName;
   };
+
   heroesImgArray.push(new Photo('Superman','images/0.jpg'));
   heroesImgArray.push(new Photo('Batman','images/1.jpg'));
   heroesImgArray.push(new Photo('Flash','images/2.jpg'));
@@ -51,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   var canvas = document.getElementById('canvas').getContext('2d');
   var chart1 = new Chart(canvas).Pie(pieData, pieOptions);
-
 
   $(document).ready(function() {
     $('#photo-one').click(function() {
