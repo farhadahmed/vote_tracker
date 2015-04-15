@@ -48,25 +48,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   var canvas = document.getElementById('canvas').getContext('2d');
   var chart1 = new Chart(canvas).Pie(pieData, pieOptions);
-  //Chart.segments[0].value = 3;
-  //Chart.update();
 
 
   $(document).ready(function() {
     $('#photo-one').click(function() {
-      chart1.segments[1].value = 6;
+      chart1.segments[1].value += 1;
       chart1.update();
       $(this).addClass('winner');
-      var hero1 = Math.floor(Math.random() * (7 - 1)) + 1;
-      var hero2 = Math.floor(Math.random() * (14 - 8)) + 8;
-      var elPhoto1 = document.getElementById('photo1');
-      elPhoto1.setAttribute('src',heroesImgArray[hero1].folder);
-      var elPhoto2 = document.getElementById('photo2');
-      elPhoto2.setAttribute('src',heroesImgArray[hero2].folder);
 
     })
     $('#photo-two').click(function() {
-      chart1.segments[0].value = 10
+      chart1.segments[0].value += 1;
       chart1.update();
       $(this).addClass('winner');
     })
