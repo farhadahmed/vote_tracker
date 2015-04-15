@@ -3,6 +3,7 @@ img {
   height: 10em;
   width: 10em;
 }
+
 h1 {
   font-family: 'Francois One', Arial;
   text-align: center;
@@ -26,8 +27,11 @@ p {
   width: 25%;
   border: 4px solid white;
 }
-.winner {
-  border: 4px solid red;
+#photo1:active {
+  border: 0.2em solid red;
+}
+#photo2:active {
+  border: 0.2em solid blue;
 }
 
 .choice-box {

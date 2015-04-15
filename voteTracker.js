@@ -21,12 +21,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
   heroesImgArray.push(new Photo('Hawkeye','images/12.jpg'));
   heroesImgArray.push(new Photo('Spider-Man','images/13.jpg'));
 
-  var hero1 = Math.floor(Math.random() * (7 - 1)) + 1;
-  var hero2 = Math.floor(Math.random() * (14 - 8)) + 8;
-  var elPhoto1 = document.getElementById('photo1');
-  elPhoto1.setAttribute('src',heroesImgArray[hero1].folder);
-  var elPhoto2 = document.getElementById('photo2');
-  elPhoto2.setAttribute('src',heroesImgArray[hero2].folder);
+  var getNewImages = function() {
+    var hero1 = Math.floor(Math.random() * (7 - 1)) + 1;
+    var hero2 = Math.floor(Math.random() * (14 - 8)) + 8;
+    var elPhoto1 = document.getElementById('photo1');
+    elPhoto1.setAttribute('src',heroesImgArray[hero1].folder);
+    var elPhoto2 = document.getElementById('photo2');
+    elPhoto2.setAttribute('src',heroesImgArray[hero2].folder);
+  };
+  getNewImages();
 
   var pieData = [
     {
@@ -54,13 +57,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $('#photo-one').click(function() {
       chart1.segments[1].value += 1;
       chart1.update();
-      $(this).addClass('winner');
-
+      getNewImages();
     })
     $('#photo-two').click(function() {
       chart1.segments[0].value += 1;
       chart1.update();
-      $(this).addClass('winner');
+      getNewImages();
     })
   });
 });
