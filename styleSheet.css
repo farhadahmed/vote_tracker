@@ -1,7 +1,15 @@
+header {
+  background-image: url('http://gs4active.com/wp-content/uploads/2013/09/red-and-black-batman.jpg');
+  color: white;
+  padding-bottom: 2em;
+}
+body {
+  background-image: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSBMzAqhQE3He-CDR7SsG0oY-z_YQjA7BXbCjs2pWUVMyN35nKHvQ');
+}
 
 img {
-  height: 10em;
-  width: 10em;
+  height: 15em;
+  width: 15em;
 }
 
 h1 {
@@ -16,22 +24,27 @@ p {
   text-align: center;
 }
 
-#photo-one, #photo-two {
-  width: 10em;
-  height: 10em;
-  margin: .5em auto;
+#img-chart-container {
+  background-color: black;
+  margin: 1em;
+  padding-bottom: 0.8em;
+  padding-top: 0.8em;
 }
 
-.choice-box {
-  float: left;
-  width: 25%;
-  border: 1em solid white;
-  margin: .5em auto;
+#photo-one, #photo-two {
+  width: 15em;
+  height: 15em;
   text-align: center;
-  font-size: 130%;
-  color: #ff0000;
-  font-weight: bold;
 }
+#photo-one {
+  float: left;
+  margin-left: 12em;
+}
+#photo-two {
+  float: right;
+  margin-right: 12em;
+}
+
 #photo1:active {
   border: 0.2em solid red;
 }
@@ -39,8 +52,7 @@ p {
   border: 0.2em solid blue;
 }
 
-#canvas1 {
-  background-color: #B8C1D4;
-  float: left;
-  margin: 1%;
+#canvas {
+  padding: 2em;
+  margin-left: 3em;
 }
