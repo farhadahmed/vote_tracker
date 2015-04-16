@@ -1,26 +1,38 @@
 'use strict';
+
 (function(){
-document.addEventListener("DOMContentLoaded", function(event) {
   var heroesImgArray = [];
+
+  var renderImages = function(heroesImgArray) {
+    var $main = $('#content');
+
+    heroesImgArray.forEach(function(img) {
+      $main.append('<img src="' + img.link + '"></img>');
+    });
+    saveToLocalStorage(heroesImgArray);
+  };
+
+  $.ajax({
+    url: "https://api.imgur.com/3/album/tBRTy.json",
+    method: 'GET',
+    headers: {
+      'Authorization': 'Client-ID 22079935028b382'
+    }
+  })
+  .done(function(res) {
+    heroesImgArray = res.data.heroesImgArray
+    renderImages(heroesImgArray);
+  })
+  .fail(function(err) {
+    console.log(err);
+  });
+
+
+document.addEventListener("DOMContentLoaded", function(event) {
   var Photo = function(heroName, folder) {
     this.folder = folder;
     this.heroName = heroName;
   };
-
-  heroesImgArray.push(new Photo('Superman','images/0.jpg'));
-  heroesImgArray.push(new Photo('Batman','images/1.jpg'));
-  heroesImgArray.push(new Photo('Flash','images/2.jpg'));
-  heroesImgArray.push(new Photo('Green Arrow','images/3.jpg'));
-  heroesImgArray.push(new Photo('Green Lantern','images/4.jpg'));
-  heroesImgArray.push(new Photo('Wonder Woman','images/5.jpg'));
-  heroesImgArray.push(new Photo('Aquaman','images/6.jpg'));
-  heroesImgArray.push(new Photo('Iron-Man','images/7.jpg'));
-  heroesImgArray.push(new Photo('Captain America','images/8.jpg'));
-  heroesImgArray.push(new Photo('Thor','images/9.jpg'));
-  heroesImgArray.push(new Photo('Hulk','images/10.jpg'));
-  heroesImgArray.push(new Photo('Black Widow','images/11.jpg'));
-  heroesImgArray.push(new Photo('Hawkeye','images/12.jpg'));
-  heroesImgArray.push(new Photo('Spider-Man','images/13.jpg'));
 
   var getNewImages = function() {
     var hero1 = Math.floor(Math.random() * (7 - 1)) + 1;
@@ -53,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var canvas = document.getElementById('canvas').getContext('2d');
   var chart1 = new Chart(canvas).Pie(pieData, pieOptions);
 
-  $(document).ready(function() {
+  $(function() {
     $('#photo-one').click(function() {
       chart1.segments[1].value += 1;
       chart1.update();
