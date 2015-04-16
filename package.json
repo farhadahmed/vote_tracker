@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/farhadahmed/vote_tracker/issues"
   },
-  "homepage": "https://github.com/farhadahmed/vote_tracker"
+  "homepage": "https://github.com/farhadahmed/vote_tracker",
+  "dependencies": {
+    "express": "^4.12.3"
+  }
 }
