@@ -17,7 +17,6 @@
   .done(function(res) {
     heroesImgArray = res.data.images;
     console.dir(res.data);
-    //getNewImages();
     renderImages(heroesImgArray);
   })
   .fail(function(err) {
@@ -25,7 +24,6 @@
   });
 
 
-// document.addEventListener("load", function(event) {
   var Photo = function(heroName, folder) {
     this.folder = folder;
     this.heroName = heroName;
@@ -83,5 +81,4 @@
       getNewImages();
     })
   });
-// });
 })();
