@@ -52,12 +52,12 @@
     {
       value: 1,
       color: 'blue',
-      label: 'Marvel'
+      label: 'DC'
     },
     {
       value: 1,
       color: 'red',
-      label: 'DC'
+      label: 'Marvel'
     }
   ];
 
