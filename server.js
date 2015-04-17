@@ -1,5 +1,7 @@
+'use strict'
+
 var http = require('http');
-var fs = require('fs');
+var express = require('express');
 
 //404 response
 function send404Response(response) {
@@ -13,7 +15,7 @@ function onRequest(request, response) {
 
   if (request.method == 'Get' && request.url == '/') {
     response.writeHead(200, {'Content-Type': 'text/html'});
-    fs.createReadStream('./index.html').pipe(response);
+    express.createReadStream('./index.html').pipe(response);
   }else {
     send404Response(response);
   }
