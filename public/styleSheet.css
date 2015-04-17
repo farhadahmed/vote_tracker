@@ -29,6 +29,7 @@ p {
   margin: 1em;
   padding-bottom: 0.8em;
   padding-top: 0.8em;
+  text-align: center;
 }
 
 #photo-one, #photo-two {
@@ -38,11 +39,9 @@ p {
 }
 #photo-one {
   float: left;
-  margin-left: 12em;
 }
 #photo-two {
   float: right;
-  margin-right: 12em;
 }
 
 #photo1:active {

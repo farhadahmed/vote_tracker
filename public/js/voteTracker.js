@@ -16,7 +16,6 @@
   })
   .done(function(res) {
     heroesImgArray = res.data.images;
-    //console.dir(res.data);
     renderImages(heroesImgArray);
   })
   .fail(function(err) {
